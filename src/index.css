@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@page {
-  size: auto;
-  margin: 0mm;
-}
-
+/* Estilos específicos para impresión */
 @media print {
-  html {
-    transform: scale(1);
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    -webkit-filter: opacity(1) !important;
-    filter: opacity(1) !important;
+  .cv-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    zoom: 108%;
   }
 
   @page {
     size: A3;
-    margin: 0mm;
+    margin: 0;
+  }
+
+  /* Asegurar que los colores se impriman correctamente */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
