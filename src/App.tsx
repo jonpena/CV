@@ -11,7 +11,10 @@ const App = () => {
       <PrintButton contentRef={contentRef} />
       <div ref={contentRef} className="min-h-screen bg-gray-100 p-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] shadow-2xl">
+          <div
+            className="cv-container max-w-[297mm] mx-auto grid grid-cols-1 md:grid-cols-[400px_1fr] shadow-2xl
+          "
+          >
             <Sidebar />
             <MainContent />
           </div>
