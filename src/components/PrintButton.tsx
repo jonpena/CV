@@ -11,10 +11,10 @@ export const PrintButton = ({ contentRef }: PrintButtonProps) => {
   return (
     <button
       onClick={() => reactToPrintFn()}
-      className="fixed top-3 right-3 bg-[#0082E6] hover:bg-[#0082E6]/80 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200 flex items-center gap-2"
+      className="fixed top-3 right-3 bg-[#0082E6] hover:bg-[#0082E6]/80 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200 flex items-center gap-2 print:hidden"
     >
       Download PDF
-      <img width={20} height={20} src="/pdf.svg" alt="Download CV" />
+      <img width={20} height={20} src="./pdf.svg" alt="Download CV" />
     </button>
   );
 };

@@ -9,15 +9,10 @@ const App = () => {
   return (
     <>
       <PrintButton contentRef={contentRef} />
-      <div ref={contentRef} className="min-h-screen bg-gray-100 p-8">
-        <div className="max-w-7xl mx-auto">
-          <div
-            className="cv-container max-w-[297mm] mx-auto grid grid-cols-1 md:grid-cols-[400px_1fr] shadow-2xl
-          "
-          >
-            <Sidebar />
-            <MainContent />
-          </div>
+      <div ref={contentRef} className="min-h-screen bg-gray-100 p-1 lg:p-8">
+        <div className="cv-container max-w-[297mm] mx-auto grid grid-cols-1 md:grid-cols-[400px_1fr] shadow-2xl rounded-sm overflow-hidden">
+          <Sidebar />
+          <MainContent />
         </div>
       </div>
     </>
