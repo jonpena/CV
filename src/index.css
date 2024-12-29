@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 /* Estilos específicos para impresión */
+:root {
+  --page-width: 297mm;
+  --page-height: 375mm;
+}
+
 @media print {
   .cv-container {
     width: 100%;
     height: 100%;
     margin: 0;
     display: flex;
-    zoom: 108%;
+    zoom: 110%;
   }
 
   @page {
-    size: A3;
+    size: var(--page-width) var(--page-height);
     margin: 0;
   }
 
