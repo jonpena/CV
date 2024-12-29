@@ -4,12 +4,10 @@ import react from "@vitejs/plugin-react-swc";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    include: ["@react-pdf/renderer"],
-  },
+  base: "./",
   build: {
     commonjsOptions: {
-      include: [/@react-pdf.*/, /node_modules/],
+      include: [/node_modules/],
     },
   },
 });
