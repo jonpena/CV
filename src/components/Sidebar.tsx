@@ -1,9 +1,16 @@
-import { Phone, Mail, MapPin, Github, Linkedin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Github,
+  Linkedin,
+  BriefcaseBusiness,
+} from "lucide-react";
 import { skills } from "../constants/skills";
 
 export function Sidebar() {
   return (
-    <div className="bg-[#0082E6] text-white p-8 space-y-8 sidebar">
+    <div className="bg-[#0082E6] text-white p-4 lg:p-8 print:p-8 space-y-8 sidebar">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">JONATHAN PEÑA</h1>
         <h2 className="text-xl text-gray-100 tracking-wider">
@@ -44,6 +51,16 @@ export function Sidebar() {
               className="text-sm hover:text-white/70 transition-colors"
             >
               https://www.linkedin.com/in/jonpeña
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <BriefcaseBusiness className="text-white/80" size={18} />
+            <a
+              target="_blank"
+              href="https://jonpena.github.io/"
+              className="text-sm hover:text-white/70 transition-colors"
+            >
+              https://jonpena.github.io
             </a>
           </div>
         </div>
