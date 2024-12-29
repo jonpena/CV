@@ -3,7 +3,7 @@ import { WorkExperience } from "./Experience";
 
 export const MainContent = () => {
   return (
-    <div className="bg-white p-12 space-y-10">
+    <div className="bg-white p-4 lg:p-12 print:p-12 space-y-10">
       <section className="space-y-4">
         <h2 className="text-2xl font-bold tracking-wider text-[#0082E6]">
           PROFILE
