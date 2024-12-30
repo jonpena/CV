@@ -6,11 +6,11 @@ import LanguageButton from "./components/buttons/LanguageButton";
 import { EditButton } from "./components/buttons/EditButton";
 
 const App = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef(null);
 
   return (
     <>
-      <div className="flex gap-x-0.5 fixed top-3 right-3 print:!hidden">
+      <div className="flex gap-x-0.5 fixed top-2 right-2 print:!hidden">
         <PrintButton contentRef={contentRef} />
         <LanguageButton />
         <EditButton />

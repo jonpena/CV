@@ -7,8 +7,7 @@ export default function LanguageButton() {
   return (
     <button
       onClick={toggleLanguage}
-      className="min-w-[90px] border ease-in-out flex items-center justify-start gap-x-2
-      bg-[#0082E6] hover:bg-[#0082E6]/80 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200
+      className="min-w-[90px] bg-[#0082E6] hover:bg-[#0082E6]/80 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-colors duration-200 flex items-center gap-2
       "
     >
       <Globe className="w-4 h-4" />
