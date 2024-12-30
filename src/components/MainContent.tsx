@@ -1,97 +1,97 @@
 import { Education } from "./Education";
 import { WorkExperience } from "./Experience";
+import { useTranslationStore } from "../store/translationStore";
 
 export const MainContent = () => {
+  const { t } = useTranslationStore();
+
   return (
     <div className="bg-white p-4 lg:p-12 print:p-12 space-y-10">
       <section className="space-y-4">
         <h2 className="text-2xl font-bold tracking-wider text-[#0082E6]">
-          PROFILE
+          {t("profile.title")}
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          Full Stack Developer with 5+ years of experience. Skilled in React,
-          Next.js, Node.js, and Golang. Proficient in CSS, JavaScript, state
-          management, and testing. Experienced in Docker, WebAssembly, and agile
-          practices like Scrum and Kanban.
+          {t("profile.description")}
         </p>
       </section>
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold tracking-wider text-[#0082E6]">
-          WORK EXPERIENCE
+          {t("workExperience.title")}
         </h2>
 
         <WorkExperience
-          title="Frontend | MERN Developer"
-          company="HOLO XR"
-          period="2023 - Present"
-          location="Santiago, Chile"
+          title={t("workExperience.holoXR.title")}
+          company={t("workExperience.holoXR.company")}
+          period={t("workExperience.holoXR.period")}
+          location={t("workExperience.holoXR.location")}
           responsibilities={[
-            "Created a Gantt chart with React.js.",
-            "Built a scheduler integrated with Autodesk APIs.",
-            "Enabled 3D model-based project progress tracking.",
-            "Improved management through real-time visual tools.",
+            t("workExperience.holoXR.responsibilities.0"),
+            t("workExperience.holoXR.responsibilities.1"),
+            t("workExperience.holoXR.responsibilities.2"),
+            t("workExperience.holoXR.responsibilities.3"),
           ]}
         />
 
         <WorkExperience
-          title="Frontend | React Developer"
-          company="Seven Suite"
-          period="2023 - 2023"
-          location="San José, Costa Rica"
+          title={t("workExperience.sevenSuite.title")}
+          company={t("workExperience.sevenSuite.company")}
+          period={t("workExperience.sevenSuite.period")}
+          location={t("workExperience.sevenSuite.location")}
           responsibilities={[
-            "Rebuilt a .NET app using Next.js frontend.",
-            "Integrated .NET 6 backend with SQL Server.",
-            "Deployed the application seamlessly on Azure.",
-            "Enhanced performance during web technology transition.",
+            t("workExperience.sevenSuite.responsibilities.0"),
+            t("workExperience.sevenSuite.responsibilities.1"),
+            t("workExperience.sevenSuite.responsibilities.2"),
+            t("workExperience.sevenSuite.responsibilities.3"),
           ]}
         />
 
         <WorkExperience
-          title="FullStack | .NET Developer"
-          company="Norkut"
-          period="2022 - 2022"
-          location="Nueva Esparta, Venezuela"
+          title={t("workExperience.norkut.title")}
+          company={t("workExperience.norkut.company")}
+          period={t("workExperience.norkut.period")}
+          location={t("workExperience.norkut.location")}
           responsibilities={[
-            "Improved CRM features for supermarket management software.",
-            "Developed point of sale and inventory control systems.",
-            "Customized and optimized nopCommerce for e-commerce.",
-            "Built applications using WPF, Windows Forms, and .NET.",
+            t("workExperience.norkut.responsibilities.0"),
+            t("workExperience.norkut.responsibilities.1"),
+            t("workExperience.norkut.responsibilities.2"),
+            t("workExperience.norkut.responsibilities.3"),
           ]}
         />
 
         <WorkExperience
-          title="Frontend | React Developer"
-          company="Nanotecks"
-          period="2020 - 2021"
-          location="Santo Domingo de los Tsachilas, Ecuador"
+          title={t("workExperience.nanotecks.title")}
+          company={t("workExperience.nanotecks.company")}
+          period={t("workExperience.nanotecks.period")}
+          location={t("workExperience.nanotecks.location")}
           responsibilities={[
-            "Promoting apartments in Santo Domingo.",
-            "Attractive design for buyer interest",
-            "SEO-focused for increased visibility",
-            "Highlighting Ecuador market opportunity",
+            t("workExperience.nanotecks.responsibilities.0"),
+            t("workExperience.nanotecks.responsibilities.1"),
+            t("workExperience.nanotecks.responsibilities.2"),
+            t("workExperience.nanotecks.responsibilities.3"),
           ]}
         />
       </section>
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold tracking-wider text-[#0082E6]">
-          EDUCATION
+          {t("education.title")}
         </h2>
 
         <div className="space-y-6">
           <Education
-            degree="Bachelor's Degree in Computer Science"
-            school="Universidad de Oriente (UDO)"
-            period="2017 - no finish"
-            details="Completed coursework in programming, algorithms, databases and software engineering"
+            degree={t("education.udo.title")}
+            school={t("education.udo.institution")}
+            period={t("education.udo.duration")}
+            details={t("education.udo.details")}
           />
 
           <Education
-            degree="High School"
-            school="U.E.N.B DR. Luis Ortega"
-            period="2011 - 2016"
-            details=""
+            degree={t("education.highSchool.title")}
+            school={t("education.highSchool.institution")}
+            period={t("education.highSchool.duration")}
+            details={t("education.highSchool.details")}
           />
         </div>
       </section>

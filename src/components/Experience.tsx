@@ -17,7 +17,7 @@ export const WorkExperience = ({
         <div>
           <h3 className="font-bold text-lg text-[#374151]">{title}</h3>
           <p className="text-gray-600">
-            {company} — {location}
+            {company} {location}
           </p>
         </div>
         <span className="text-gray-500 text-sm">{period}</span>

@@ -6,9 +6,14 @@ import {
   Linkedin,
   BriefcaseBusiness,
 } from "lucide-react";
-import { skills } from "../constants/skills";
+import { translations } from "../constants/translations";
+import { useTranslationStore } from "../store/translationStore";
 
-export function Sidebar() {
+export const Sidebar = () => {
+  const { t, currentLang } = useTranslationStore();
+
+  console.log(currentLang);
+
   return (
     <div className="bg-[#0082E6] text-white p-4 lg:p-8 print:p-8 space-y-8 sidebar">
       <div className="text-center mb-12">
@@ -19,7 +24,9 @@ export function Sidebar() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-xl font-bold tracking-wider">CONTACT</h3>
+        <h3 className="text-xl font-bold tracking-wider">
+          {t("contact.title")}
+        </h3>
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <MapPin className="text-white/80" size={18} />
@@ -67,17 +74,19 @@ export function Sidebar() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-xl font-bold tracking-wider">SKILLS</h3>
+        <h3 className="text-xl font-bold tracking-wider">
+          {t("skills.title")}
+        </h3>
         <div className="space-y-4">
           <div>
             <h4 className="text-gray-100 text-sm mb-2">Technical</h4>
             <div className="flex flex-wrap gap-2">
-              {skills.technical.map((skill) => (
+              {translations.en.skills.technical.map((_, index) => (
                 <span
-                  key={skill}
+                  key={index}
                   className="px-3 py-1 bg-[#0066B8] text-sm rounded-full hover:bg-[#005299] transition-colors"
                 >
-                  {skill}
+                  {t(`skills.technical.${index}`)}
                 </span>
               ))}
             </div>
@@ -85,12 +94,12 @@ export function Sidebar() {
           <div>
             <h4 className="text-gray-100 text-sm mb-2">Soft</h4>
             <div className="flex flex-wrap gap-2">
-              {skills.softs.map((soft) => (
+              {translations.en.skills.soft.map((_, index) => (
                 <span
-                  key={soft}
+                  key={index}
                   className="px-3 py-1 bg-[#0066B8] text-sm rounded-full hover:bg-[#005299] transition-colors"
                 >
-                  {soft}
+                  {t(`skills.soft.${index}`)}
                 </span>
               ))}
             </div>
@@ -99,4 +108,4 @@ export function Sidebar() {
       </div>
     </div>
   );
-}
+};

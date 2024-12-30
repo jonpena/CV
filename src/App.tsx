@@ -1,14 +1,20 @@
 import { Sidebar } from "./components/Sidebar";
 import { MainContent } from "./components/MainContent";
 import { useRef } from "react";
-import { PrintButton } from "./components/PrintButton";
+import { PrintButton } from "./components/buttons/PrintButton";
+import LanguageButton from "./components/buttons/LanguageButton";
+import { EditButton } from "./components/buttons/EditButton";
 
 const App = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
-      <PrintButton contentRef={contentRef} />
+      <div className="flex gap-x-0.5 fixed top-3 right-3 print:!hidden">
+        <PrintButton contentRef={contentRef} />
+        <LanguageButton />
+        <EditButton />
+      </div>
       <div
         ref={contentRef}
         className="min-h-screen bg-gray-100 p-0 print:p-0 lg:p-8"
