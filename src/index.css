@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  font-family: "Poppins", serif;
+}
+
 /* Estilos específicos para impresión */
 :root {
   --page-width: 297mm;
-  --page-height: 375mm;
+  --page-height: 391mm;
 }
 
 @media print {
