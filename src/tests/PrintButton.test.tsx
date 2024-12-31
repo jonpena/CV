@@ -18,7 +18,7 @@ describe("PrintButton", () => {
     render(<PrintButton contentRef={mockContentRef} />);
   });
 
-  it("should render text button", () => {
+  it("should render Print PDF", () => {
     expect(screen.getByText(/Print PDF/i)).toBeInTheDocument();
   });
 
