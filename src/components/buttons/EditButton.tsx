@@ -24,9 +24,9 @@ export const EditButton = () => {
         `}
       >
         {isEditing ? (
-          <Check className="w-5 h-5" />
+          <Check data-testid="check-icon" className="w-5 h-5" />
         ) : (
-          <Pencil className="w-5 h-5" />
+          <Pencil data-testid="pencil-icon" className="w-5 h-5" />
         )}
       </button>
     </div>

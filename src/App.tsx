@@ -6,7 +6,7 @@ import LanguageButton from "./components/buttons/LanguageButton";
 import { EditButton } from "./components/buttons/EditButton";
 
 const App = () => {
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
