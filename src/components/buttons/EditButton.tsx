@@ -20,7 +20,7 @@ export const EditButton = () => {
       <button
         onClick={toggleEdit}
         className={`
-        w-max bg-[#0082E6] hover:bg-[#0082E6]/80 text-white font-semibold py-2.5 px-4 rounded-lg shadow-md transition-colors duration-200 flex items-center gap-2
+        w-max bg-[#0082E6] brightness-[1.15] hover:brightness-105 text-white font-semibold py-2.5 px-4 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2
         `}
       >
         {isEditing ? (
