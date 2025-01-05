@@ -1,9 +1,14 @@
-/// <reference types="vitest" />
+/// <reference types="vite/client" />
 
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import { UserConfig } from "vite";
+import type { InlineConfig } from "vitest";
 
-// https://vite.dev/config/
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig;
+}
+
 export default defineConfig({
   plugins: [react()],
   base: "./",
@@ -17,4 +22,4 @@ export default defineConfig({
     environment: "happy-dom",
     setupFiles: ["./src/tests/setup.ts"],
   },
-});
+} as VitestConfigExport);
