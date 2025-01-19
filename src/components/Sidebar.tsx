@@ -10,9 +10,7 @@ import { translations } from "../constants/translations";
 import { useTranslationStore } from "../store/translationStore";
 
 export const Sidebar = () => {
-  const { t, currentLang } = useTranslationStore();
-
-  console.log(currentLang);
+  const { t } = useTranslationStore();
 
   return (
     <div className="bg-[#0082E6] text-white  pt-16 md:pt-4 p-4 lg:p-8 print:p-8 space-y-8 sidebar">
